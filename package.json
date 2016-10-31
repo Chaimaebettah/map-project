@@ -1,0 +1,17 @@
+{
+  "name": "chayy",
+  "version": "1.0.0",
+  "description": "In this project I use Google Maps API, Foursquare API,  wikipedia API,and knockout.js to create a single web application  that displays  10 different location, each one has their own information.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-minify": "0.0.10",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5"
+  }
+}

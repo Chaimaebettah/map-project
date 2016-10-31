@@ -1,0 +1,134 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: arial;
+}
+
+.main-header {
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    color: white;
+
+}
+
+.toggle {
+    height: 30px;
+    width: 37px;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+}
+
+.toggleline {
+    margin-bottom: 5px;
+    background: dodgerblue;
+    width: 37px;
+    height: 3px;
+    cursor: pointer;
+
+}
+
+.slide-out-left {
+    position: fixed;
+    top: 10px;
+    left: -520px;
+    width: 200px;
+    height: 100%;
+    background-color: black;
+    color: dodgerblue;
+}
+
+.slide-out-title {
+    margin-bottom: 40px;
+    margin-left: 10px;
+}
+
+.slide-out-left.on {
+    left: 0;
+
+}
+
+.toggle.on {
+    left: 200px;
+}
+
+.map-section.on {
+    left: 204px;
+
+}
+
+.map-section {
+    color: blue;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    right: 0;
+}
+
+.map {
+    height: calc(100vh - 50px);
+}
+
+.submit {
+    background-color: dodgerblue;
+    color: white;
+    padding: 8px 6px;
+    margin-left: -4px;
+}
+
+.address {
+    padding: 8px 15px;
+
+}
+
+.content {
+    font-weight: 200;
+    color: black;
+    font-family: Avenir;
+}
+
+.location {
+    padding: 6px 16px;
+}
+
+.location-name {
+    color: #6f6f6f;
+    text-align: center;
+    margin-top: 18px;
+
+}
+
+@media screen and (max-width: 400px) {
+    #map {
+        /*display:none;*/
+        /*background-image: url("images1/image-1-small.jpg");*/
+        max-width: 360px;
+        height: calc(100vh - 50px);
+
+    }
+
+}
+
+.venue-style {
+    text-align: center;
+    color: black;
+    font-family: Avenir;
+    font-size: 10px;
+
+}
+
+.api-alert {
+    position: absolute;
+    top: 24px;
+    right: 40%;
+    z-index: 1000;
+    padding: 12px;
+    color: white;
+    background-color: #FF5F4C;
+}
+

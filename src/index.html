@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title> Neighborhood Map </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header>
+    <div class="main-header">
+        <div class="burger-menu">
+            <div class="toggle" data-bind="click: toggleList, css:showList">
+                <div class="toggleline"></div>
+                <div class="toggleline"></div>
+                <div class="toggleline"></div>
+            </div>
+        </div>
+        <div class="slide-out-left" data-bind="css:showList">
+            <h2 class="slide-out-title">Location Info</h2>
+            <input id="address" class="address" type="search" placeholder="Station Location"
+                   data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off">
+            <button id="submit" class="submit">Filter</button>
+
+            <ul data-bind="template: {name:'array', foreach:arr}"></ul>
+            <script type="text/html" id="array">
+                <li class="location" data-bind="click: $parent.focusLocation">
+                    <strong data-bind="text: name"></strong>
+                </li>
+            </script>
+        </div>
+    </div>
+
+</header>
+<section class="map-section" data-bind="css:showList">
+    <div id="map" class="map"></div>
+</section>
+
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIeBMwXgDtmiCPapLgQ7X7KsuaEXKXIk4&v=3.exp&signed_in=true&callback=googleSucces"
+        onerror="googleError()"></script>
+
+<script src="lib/jquery-1.12.0.min.js"></script>
+<script src="lib/knockout-3.4.0.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
